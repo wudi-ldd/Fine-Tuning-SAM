@@ -1,4 +1,4 @@
-# Fine-tuning SAM with Custom Dataset
+# Fine-tuning Segment Anything Model(SAM) with Custom Dataset
 
 This guide explains how to fine-tune the SAM model using a custom dataset with bounding boxes, ideal for complex scenarios. This approach allows for fine-tuning on specific targets within images without considering non-target areas.
 
