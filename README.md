@@ -52,3 +52,8 @@ After training the model, use `predict.py` for predictions.
 
 - `extract_matching_images.py`: Extracts images from a target folder based on image names in a txt file. Useful for data segmentation.
 - `convert_labels_color.py`: Converts training masks to the same color as prediction masks.
+
+If you encounter any issues with the code or data, please feel free to contact me.
+
+**Contact Information**:
+- Email: ldslidongshen@163.com
