@@ -15,7 +15,9 @@ This guide explains how to fine-tune the SAM model using a custom dataset with b
 3. **Preparing VOCdevkit/VOC2007 Folder**:
    - Run `resize.py` to place resized original images and corresponding masks into `VOCdevkit\VOC2007\JPEGImages` and `VOCdevkit\VOC2007\SegmentationClass`.
    - Run `json_scaling.py` to resize JSON files and place them in `VOCdevkit\VOC2007\json`.
-   - **Note**: If training images have varying dimensions, the SAM model's data normalization can cause mask misalignment, leading to incorrect loss calculation. Ensure that images, masks, and JSON annotation information in `VOCdevkit/VOC2007` are normalized to consistent dimensions. Adjust the size parameters in `resize.py` and `json_scaling.py` as needed.
+   - **Note**: If the width and height of individual training images are inconsistent, the data normalization process of the SAM model can cause the generated masks to misalign with the actual masks, leading to incorrect loss
+ calculations. Therefore, it is necessary to normalize each image, mask, and JSON file annotation in `VOCdevkit/VOC2007` to have consistent dimensions before training. You can adjust the dimensions by modifying the `size` 
+ parameter in the `resize.py` and `json_scaling.py` files.
 
 4. **Dataset Splitting**: Run `voc_annotation.py` to divide the dataset into training and validation sets. The results will be saved in `VOCdevkit\VOC2007\ImageSets\Segmentation`.
 
